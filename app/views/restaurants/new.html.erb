@@ -1,0 +1,25 @@
+
+
+
+
+<div class="container">
+  <div class="card m-auto shadow-sm" style="width: 48rem;">
+    <div class="card-body">
+      <div class="row mb-2">
+        <h2 class="card-title">
+        Add a Restaurant
+        </h2>
+      </div>
+
+        <%= simple_form_for(@restaurant) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :phone_number %>
+          <%= f.association :category %>
+          <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+
+    </div>
+  </div>
+
+</div>
